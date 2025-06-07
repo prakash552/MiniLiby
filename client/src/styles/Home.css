@@ -1,0 +1,97 @@
+.offer-section {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0 20px;
+overflow: hidden;
+
+}
+
+.offer-banner {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+ max-height:600px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.offer-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.offer-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  border-radius: 16px;
+  transition: transform 0.6s ease;
+}
+
+.offer-slide:hover img {
+  transform: scale(1.02);
+}
+
+.offer-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+ box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 12px;
+  animation: fadeInUp 1s ease;
+ 
+}
+
+.offer-content h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.offer-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.shop-btn {
+  padding: 15px 28px;
+  background-color: #0077b6;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
+}
+
+.shop-btn:hover {
+  background-color: #0077b6;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 119, 182, 0.5);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translate(-50%, 20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+
+

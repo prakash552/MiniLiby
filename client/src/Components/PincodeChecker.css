@@ -1,0 +1,95 @@
+.pincode-checker-container{
+padding-bottom: 50px;
+  background: #0b2554;
+}
+.pincode-checker {
+background: linear-gradient(90deg, #001f3f, #003366);
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+  max-width: 95%;
+ margin: 0px auto;
+  text-align: center;
+  animation: fadeInUp 0.8s ease;
+  border: 1px solid #e0e0e0;
+  max-height: 200px;
+  
+}
+
+.pincode-checker h3 {
+  font-size: 26px;
+  color: white;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  padding: 14px 18px;
+  width: 80%;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 36px;
+  outline:auto;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+.input-group button {
+  padding: 14px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.input-group button:hover {
+  background: #0056b3;
+}
+
+.message {
+  margin-top: 5px;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.success {
+  color: #28a745;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    left: 30%;
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    left: 0;
+  }
+}

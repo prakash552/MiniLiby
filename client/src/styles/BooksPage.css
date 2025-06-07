@@ -1,0 +1,230 @@
+/* BooksPage.css */
+
+.books-page {
+  display: flex;
+  padding: 2rem;
+  background: #0b2554;
+  font-family: 'Segoe UI', sans-serif;
+  gap: 2rem;
+  animation: fadeIn 0.6s ease-in;
+  
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 300px;
+  background-color: #3863b5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  animation: slideLeft 0.6s ease-in;
+}
+
+.sidebar h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 500;
+  color: rgb(179, 160, 160);
+}
+
+.sidebar input[type="text"],
+.sidebar select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.sidebar input[type="text"]:focus,
+.sidebar select:focus {
+  border-color: #2d6cdf;
+  box-shadow: 0 0 0 2px rgba(45, 108, 223, 0.2);
+}
+
+.sidebar input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.book-list {
+  flex: 4;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2.9rem;
+  animation: slideUp 0.5s ease-in;
+  margin-right: 10px;
+
+}
+
+.book-card {
+  background: #3863b5;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 0.85rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 250px;
+
+}
+
+.book-card:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-card h4 {
+  font-size: 1.1rem;
+  margin: 0.6rem 0 0.2rem;
+  color: white;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: black;
+}
+
+
+.book-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  font-weight: 600;
+  color: white;
+}
+
+.rating {
+  color: #f39c12;
+}
+
+.price {
+  color: #2d6cdf;
+}
+
+.book-card button {
+  padding: 0.85rem 1rem;
+  background-color: #2d6cdf;
+  color: #fff;
+  border: none;
+  margin-top: 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-card button:hover {
+  background-color: #1a4fb0;
+}
+
+/* No books text */
+.no-books {
+  font-size: 1.2rem;
+  color: red;
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .books-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+
+  .book-card img {
+    height: 200px;
+  }
+}
+.filter-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.apply-btn,
+.reset-btn {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-btn {
+  background-color: #2d6cdf;
+  color: white;
+}
+
+.apply-btn:hover {
+  background-color: #1b4fb6;
+}
+
+.reset-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}

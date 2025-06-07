@@ -1,0 +1,104 @@
+.best-selling-section {
+  padding: 50px 20px;
+ background: #0b2554;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 80%;
+  background-color: white;
+  margin: 8px 72px 12px;
+  border-radius: 2px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+
+}
+
+.book-card{
+background : #3863b5;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  max-width: 250px;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  width:200px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  margin: 15px 0 5px;
+  color: black;
+}
+
+.book-card .author {
+  color: #f7fb0a;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.book-card .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.book-card  .add-btn {
+  background-color: #3190ef;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+
+
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

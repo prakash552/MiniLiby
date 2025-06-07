@@ -1,0 +1,131 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: linear-gradient(90deg, #001f3f, #003366);
+	padding: 20px 40px;
+	color: white;
+	flex-wrap: wrap;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+	animation: navbarSlide 1s ease forwards;
+	margin: 0px;
+  }
+  
+  @keyframes navbarSlide {
+	0% {
+	  transform: translateY(-100%);
+	  opacity: 0;
+	}
+	100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  .navbar-left {
+	flex: 1;
+  }
+  
+  .navbar-logo {
+	font-size: 28px;
+	font-weight: bold;
+	background: linear-gradient(45deg, #00c3ff, #ffff1c);
+	-webkit-background-clip: text;
+	color: transparent;
+	animation: logoFade 2s ease forwards;
+  }
+  
+  @keyframes logoFade {
+	from {
+	  opacity: 0;
+	  transform: scale(0.7);
+	}
+	to {
+	  opacity: 1;
+	  transform: scale(1);
+	}
+  }
+  
+  .navbar-center {
+	flex: 2;
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	list-style: none;
+	padding: 0;
+  }
+  
+  .navbar-center li a {
+	color: #f0f0f0;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
+	position: relative;
+	transition: color 0.3s ease;
+  }
+  
+  .navbar-center li a::after {
+	content: "";
+	width: 0;
+	height: 2px;
+	background: #00c3ff;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	transition: width 0.3s ease;
+  }
+  
+  .navbar-center li a:hover {
+	color: #00c3ff;
+  }
+  
+  .navbar-center li a:hover::after {
+	width: 100%;
+  }
+  .navbar-center li a.active,
+.navbar-right .active {
+  background: linear-gradient(45deg, #00c3ff, #ffff1c);
+  color: #1b1b1b !important;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 6px 14px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+  
+  .navbar-right {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+  }
+  
+  .login-btn, .register-btn, .cart-btn {
+	padding: 10px 20px;
+	border-radius: 25px;
+	background: linear-gradient(45deg, #007bff, #00c3ff);
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	border: none;
+	transition: background 0.3s, transform 0.3s;
+  }
+  
+  .login-btn:hover, .register-btn:hover, .cart-btn:hover {
+	background: linear-gradient(45deg, #00c3ff, #007bff);
+	transform: scale(1.1);
+	box-shadow: 0 0 15px #00c3ff;
+  }
+  .navbar-right .user-icon {
+	font-size: 24px;
+	color: #0d0d0d;
+	cursor: pointer;
+	transition: color 0.3s ease;
+  }
+  .user-icon:hover {
+	color: #00c3ff;
+	transform: scale(1.2);
+  }
+  

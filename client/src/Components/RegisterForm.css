@@ -1,0 +1,98 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+  
+ gap: 0.4rem;
+  animation: fadeIn 0.5s ease;
+  width: 100%;
+  padding: 0.4rem 3rem;
+  border-radius: 10px;
+background: #0b2554;
+  box-shadow: 0 4px 8px rgba(254, 254, 254, 0.9);
+}
+
+.register-container .register-form label {
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+ width: 60%;
+}
+
+.register-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.register-form input:focus {
+  border-color: #004e92;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 78, 146, 0.9);
+}
+
+.register-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.agree {
+  font-size: 0.95rem;
+  color: #444;
+  width: auto;
+ 
+}
+
+.highlight {
+  color: #004e92;
+  font-weight: bold;
+  margin-left: 4px;
+  cursor: pointer;
+  width: auto;
+  display: block;
+}
+
+.register-btn {
+  background-color: #004e92;
+  color: white;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #003366;
+}
+
+.register-extra-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: #004e92;
+  cursor: pointer;
+  font-weight: bold;
+}
+.register-extra-info p {
+  margin: 0;
+  font-size: 0.9rem;
+}
