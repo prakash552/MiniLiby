@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import LoginForm from '../Components/LoginForm';
-import RegisterForm from '../Components/RegisterForm';
-import '../styles/AuthPage.css';
-import bannerImage from '../assets/img.png';
+import LoginForm from '../../Components/user/LoginForm';
+import RegisterForm from '../../Components/user/RegisterForm';
+import '../../styles/user/AuthPage.css'; // Ensure you have this CSS file for styling
+import bannerImage from '../../assets/img.png';
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true);

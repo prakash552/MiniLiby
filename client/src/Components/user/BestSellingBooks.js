@@ -1,6 +1,6 @@
 import React from 'react';
 import './BestSellingBooks.css'; // CSS file for BestSellingBooks component
-import { useCart } from '../Context/CartContext'; // Adjust path if needed
+import { useCart } from '../../Context/CartContext'; // Adjust path if needed
 
 const books = [
   { id: 1, title: 'The Silent Patient', author: 'Alex Michaelides', price: 499, image: '/assets/book1.jpg' },

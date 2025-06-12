@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Navbar from '../Components/Navbar';
-import SearchBar from '../Components/SearchBar';
-import Footer from '../Components/Footer';
-import '../styles/BooksPage.css';
-import { useCart } from '../Context/CartContext'; 
+import Navbar from '../../Components/user/Navbar';
+import SearchBar from '../../Components/user/SearchBar';
+import Footer from '../../Components/user/Footer';
+import '../../styles/user/BooksPage.css';
+import { useCart } from '../../Context/CartContext'; 
 
 const booksData = [
   {
@@ -45,8 +45,6 @@ const booksData = [
     category: 'Thriller',
     language: 'English',
     image: '/assets/books/silent_patient.jpg',
-    
-
   },
   {
     id: 5,
@@ -55,9 +53,11 @@ const booksData = [
     price: 350,
     rating: 5,
     category: 'Finance',
+    language: 'English',
+    image: '/assets/books/richdad.jpg',
   },
   {
-    id:7,
+    id: 7,
     title: 'The Alchemist',
     author: 'Paulo Coelho',
     price: 299,

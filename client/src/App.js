@@ -3,13 +3,13 @@ import { Routes, Route } from 'react-router-dom'; // ❌ Removed BrowserRouter h
 import './App.css';
 
 // Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import ContactPage from './pages/ContactPage';
-import BooksPage from './pages/BooksPage';
-import Authors from './pages/Authors'; // Importing Authors page
-import AuthPage from './pages/AuthPage'; // Importing Authors page
-import CartPage from './pages/CartPage';
+import Home from './pages/user/Home';
+import About from './pages/user/About';
+import ContactPage from './pages/user/ContactPage';
+import BooksPage from './pages/user/BooksPage';
+import Authors from './pages/user/Authors'; // Importing Authors page
+import AuthPage from './pages/user/AuthPage'; // Importing Authors page
+import CartPage from './pages/user/CartPage'; // Importing CartPage
 
 // Context
 import { CartProvider } from './Context/CartContext';

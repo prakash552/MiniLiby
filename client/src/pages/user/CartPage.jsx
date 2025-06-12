@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../styles/CartPage.css'; // CSS file for CartPage
-import { useCart } from '../Context/CartContext';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import '../../styles/user/CartPage.css'; // CSS file for CartPage
+import { useCart } from '../../Context/CartContext';
+import Navbar from '../../Components/user/Navbar';
+import Footer from '../../Components/user/Footer';
 
 const CartPage = () => {
   const { cart, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();

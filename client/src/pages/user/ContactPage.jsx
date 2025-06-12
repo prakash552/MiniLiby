@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import '../styles/ContactPage.css';
+import Navbar from '../../Components/user/Navbar';
+import Footer from '../../Components/user/Footer';
+import '../../styles/user/ContactPage.css'; // Ensure you have this CSS file for styling
 import { FaInstagram, FaTwitter, FaWhatsapp, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const ContactPage = () => {

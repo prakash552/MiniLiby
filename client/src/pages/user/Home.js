@@ -1,20 +1,22 @@
 import React from 'react';
-import '../styles/Home.css'; // CSS file for Home component
-import Navbar from '../Components/Navbar';
-import SearchBar from '../Components/SearchBar';
+import '../../styles/user/Home.css'; // CSS file for Home component
+import Navbar from '../../Components/user/Navbar';
+import SearchBar from '../../Components/user/SearchBar';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import banner1 from '../assets/banner.jpg';
-import banner2 from '../assets/banner1.jpg';
-import banner3 from '../assets/banner2.jpg';
-import banner4 from '../assets/banner3.jpg';
-import banner5 from '../assets/banner4.jpg';
-import BestSellingBooks from '../Components/BestSellingBooks';
-import PincodeChecker from '../Components/PincodeChecker';
-import WhyChooseUs from '../Components/WhyChooseUs';
-import TestimonialSlider from '../Components/TestimonialSlider';
-import Footer from '../Components/Footer';
+import banner1 from '../../assets/banner.jpg';
+import banner2 from '../../assets/banner1.jpg';
+import banner3 from '../../assets/banner2.jpg';
+import banner4 from '../../assets/banner3.jpg';
+import banner5 from '../../assets/banner4.jpg';
+
+
+import BestSellingBooks from '../../Components/user/BestSellingBooks';
+import PincodeChecker from '../../Components/user/PincodeChecker';
+import WhyChooseUs from '../../Components/user/WhyChooseUs';
+import TestimonialSlider from '../../Components/user/TestimonialSlider';
+import Footer from '../../Components/user/Footer';
 
 const offerImages = [banner1, banner2, banner3, banner4, banner5];
 
