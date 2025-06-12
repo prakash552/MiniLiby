@@ -1,30 +1,64 @@
 import React from 'react';
-import '../styles/About.css';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import '../styles/About.css';
 
-function About() {
+const About = () => {
   return (
     <>
       <Navbar />
-      <div className="about-container">
-       
+
+      <div className="about-hero">
+        <div className="hero-text">
+          <h1>About BookBasket 📚</h1>
+          <p>Your trusted destination for best-selling books with love & passion.</p>
+        </div>
       </div>
-     
-    <div className="about-page">
-      <h1 className="about-heading">About Us 📖</h1>
 
-      <div className="about-content">
-        <p>Welcome to Book World! We are passionate about connecting readers with their next favorite story. Our mission is to provide a luxurious online experience for every book lover.</p>
+      <section className="about-mission">
+        <h2>Our Mission</h2>
+        <p>
+          At BookBasket, our mission is simple – to bring quality literature to your doorstep,
+          inspire readers, and support authors around the world. From fiction to finance, self-help
+          to spirituality — we deliver stories that matter.
+        </p>
+      </section>
 
-        <p>From Fiction to Science, from History to Mystery — we have it all at the best prices. Discover, explore, and enjoy a new journey with every page you turn.</p>
-
-        <p>Thank you for trusting us. Happy Reading! 📚✨</p>
+      <div className="why-choose">
+        <h2>Why Choose Us?</h2>
+        <div className="cards">
+          <div className="card">🚚 Fast & Reliable Delivery</div>
+          <div className="card">📈 Best Sellers & Trending</div>
+          <div className="card">🛒 Easy Returns</div>
+          <div className="card">🎁 Exclusive Offers</div>
+        </div>
       </div>
-    </div>
-     <Footer />
+
+      <div className="team-section">
+        <h2>Meet Our Team</h2>
+        <div className="team-grid">
+          <div className="team-card">
+            <img src="/assets/team/prakash.jpg" alt="Prakash" />
+            <h4>Prakash Mishra</h4>
+            <p>Founder & Developer</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="stats-section">
+        <div className="stat-box">📚 1200+ Books</div>
+        <div className="stat-box">🤝 10K+ Happy Customers</div>
+        <div className="stat-box">🌍 25+ Cities Served</div>
+      </div>
+
+      <div className="about-cta">
+        <h3>Have questions or feedback?</h3>
+        <a href="/contact" className="contact-button">Contact Us ➜</a>
+      </div>
+
+      <Footer />
     </>
   );
-}
+};
 
 export default About;

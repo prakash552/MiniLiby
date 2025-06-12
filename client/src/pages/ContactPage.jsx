@@ -37,18 +37,24 @@ const ContactPage = () => {
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Name  <span>*</span></label>
-            <input type="text" name="name" required value={formData.name} onChange={handleChange} />
+            <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder='enter your name '/>
           </div>
 
           <div className="input-group">
             <label>Email  <span>*</span></label>
-            <input type="email" name="email" required value={formData.email} onChange={handleChange} />
+            <input type="email" name="email" required value={formData.email} onChange={handleChange} placeholder='enter gmail id' />
           </div>
 
           <div className="input-group">
-            <label>Phone </label>
-            <input type="tel" name="phone" value={formData.phone} onChange={handleChange} />
-          </div>
+  <label>Phone</label>
+  <input
+    type="tel" name="phone" value={formData.phone} onChange={handleChange}   // Only Indian mobile numbers (start from 6-9)
+    maxLength="10"
+    minLength="10"
+    placeholder="Enter 10-digit phone number"
+    required
+  />
+</div>
 
           <div className="input-group">
             <label>Feedback  <span>*</span> </label>
@@ -64,8 +70,8 @@ const ContactPage = () => {
         <div className="contact-left">
           <h2>Contact Information</h2>
           <p><strong>Location:</strong> Dadri, India</p>
-          <p><strong>Phone:</strong> +91-9876543210</p>
-          <p><strong>Email:</strong> contact@yourcompany.com</p>
+          <p><strong>Phone:</strong> +91-8743821921</p>
+          <p><strong>Email:</strong> minilibhelp@gmail.com</p>
           <p><strong>Support Hours:</strong> Mon-Sat, 10 AM - 6 PM</p>
           
           {/* Social Icons */}
@@ -73,7 +79,7 @@ const ContactPage = () => {
             <a href="https://example.com"><FaInstagram /></a>
             <a href="https://example.com"><FaTwitter /></a>
             <a href="https://example.com"><FaEnvelope /></a>
-            <a href="https://example.com"><FaWhatsapp /></a>
+            <a href="https://example.com/"><FaWhatsapp /></a>
             <a href="https://example.com"><FaLinkedin /></a>
           </div>
         </div>

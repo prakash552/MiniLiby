@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         <div className="navbar-logo">
-          📚 BookNest
+          📚  MiniLib
         </div>
       </div>
 

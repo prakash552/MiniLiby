@@ -1,5 +1,5 @@
 .contact-hero {
-background: linear-gradient(90deg, #001f3f, #2575fc);
+background:  #2b68d2;
   color: white;
   text-align: center;
   padding: 60px 20px;
@@ -91,9 +91,9 @@ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
   max-width: 800px;
   margin: 40px auto;
   padding: 30px;
-background: linear-gradient(90deg, #001f3f, #2575fc);
+background: transparent;
   border-radius: 15px;
-  box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 13px 4px 12px 12px  rgba(19, 19, 19, 0.8);
   min-height: 500px;
 }
 
@@ -122,7 +122,7 @@ background: linear-gradient(90deg, #001f3f, #2575fc);
 .input-group textarea:focus {
   outline: none;
   border-color: white;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.9);
 }
 .input-group .feedback{
   width: 485px;
