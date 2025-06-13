@@ -2,6 +2,17 @@ import './Navbar.css';
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  alert("Logged out");
+  navigate("/login");
+};
+
+
+
+
+
 function Navbar() {
   return (
     <nav className="navbar">

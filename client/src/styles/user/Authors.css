@@ -1,0 +1,69 @@
+.authors-page {
+  padding: 40px 20px;
+  background-color: #fdfdfd;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.authors-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.author-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.author-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.author-card:hover {
+  transform: scale(1.03);
+}
+
+.author-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.author-card h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.author-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.author-card ul {
+  list-style: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.author-links a {
+  display: inline-block;
+  margin: 8px 10px 0;
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+}
+.author-links a:hover {
+  text-decoration: underline;
+}
