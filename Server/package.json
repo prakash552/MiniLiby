@@ -2,10 +2,10 @@
   "name": "miniliby",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-},
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/prakash552/MiniLiby.git"
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/prakash552/MiniLiby#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",

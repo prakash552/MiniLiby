@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './LoginForm.css'; // Assuming you have a CSS file for styling
+import { useNavigate } from 'react-router-dom';
+import './LoginForm.css';
 
 const LoginForm = () => {
   const [loginData, setLoginData] = useState({
@@ -7,6 +8,7 @@ const LoginForm = () => {
     password: '',
     rememberMe: false,
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -16,10 +18,32 @@ const LoginForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Validate & send to backend
-    console.log('Login Data:', loginData);
+
+    try {
+      const res = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(loginData),
+      });
+
+      const data = await res.json();
+
+      if (data.token) {
+        // ✅ Store token and full user object
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('user', JSON.stringify(data.user));
+
+        alert('Login successful!');
+        navigate('/'); // 👈 Redirect to homepage or dashboard
+      } else {
+        alert(data.message || 'Login failed');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Something went wrong during login');
+    }
   };
 
   return (
@@ -60,7 +84,6 @@ const LoginForm = () => {
       <button type="submit" className="login-btn">Login</button>
 
       <div className="login-extra-info">
-       
         <p>Or login with:</p>
         <div className="social-icons">
           <i className="fa fa-google"></i>

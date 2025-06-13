@@ -9,15 +9,19 @@ import ContactPage from './pages/user/ContactPage';
 import BooksPage from './pages/user/BooksPage';
 import Authors from './pages/user/Authors'; // Importing Authors page
 import AuthPage from './pages/user/AuthPage'; // Importing Authors page
-import CartPage from './pages/user/CartPage'; // Importing CartPage
+import CartPage from './pages/user/CartPage';
+import Profile from './pages/user/Profile'; // Importing CartPage
 
 // Context
 import { CartProvider } from './Context/CartContext';
+import { UserProvider } from './Context/UserContext';
 
 function App() {
   return (
     // ✅ Just use Routes, not BrowserRouter again
     <CartProvider>
+    <UserProvider>
+      {/* Removed BrowserRouter here */}
       <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
@@ -28,8 +32,10 @@ function App() {
           <Route path="/BooksPage" element={<BooksPage />} />
           <Route path="/auth" element={<AuthPage />} /> {/* Added Auth route */}
           <Route path="*" element={<h1>404 Not Found</h1>} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
+   </UserProvider>
     </CartProvider>
   );
 }
