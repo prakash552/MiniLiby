@@ -72,24 +72,17 @@ background : #3863b5;
 }
 
 .book-card .price {
+  display: flex;
+  justify-content: end;
+  align-items: center;
   font-size: 1rem;
   font-weight: 600;
   color: black;
-  margin-bottom: 10px;
+padding-top: 20px;
+position: relative;
+
+
 }
-
-.book-card  .add-btn {
-  background-color: #3190ef;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition:  0.3s ease;
-}
-
-
 
 /* ✨ Animation */
 @keyframes fadeIn {
@@ -101,4 +94,64 @@ background : #3863b5;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.book-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row; /* 👈 Now buttons are side by side */
+  justify-content: space-between;
+  gap: 5px;
+
+}
+
+
+.book-buttons .add-btn, .wishlist-btn {
+  flex: 1;
+  font-size: 1rem;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #0b2554;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  height :50px;
+  color: white;
+  text-align: center;
+}
+.book-buttons .wishlist-btn {
+  flex: 1;
+  font-size: 1rem;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #0b2554;
+  transition: background 0.3s ease;
+
+}
+
+.add-btn {
+  background-color: #3190ef;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #006edc;
+}
+
+.wishlist-btn {
+  background-color: #ff3366;
+  color: white;
+}
+
+.wishlist-btn:hover {
+  background-color: #e6004c;
+}
+
+.wishlist-btn:disabled {
+  background-color: #ccc;
+  color: black;
+  cursor: not-allowed;
 }

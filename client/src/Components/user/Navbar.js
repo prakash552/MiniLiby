@@ -48,6 +48,7 @@ const handleLogout = () => {
         <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
         <li><NavLink to="/BooksPage" className={({ isActive }) => isActive ? 'active' : ''}>Books</NavLink></li>
         <li><NavLink to="/authors" className={({ isActive }) => isActive ? 'active' : ''}>Authors</NavLink></li>
+       <li><NavLink to="/wish" className={({ isActive }) => isActive ? 'active' : ''}>Wishlist</NavLink></li>
         <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About Us</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
       </ul>

@@ -1,6 +1,8 @@
-import React from 'react';
-import './BestSellingBooks.css'; // CSS file for BestSellingBooks component
-import { useCart } from '../../Context/CartContext'; // Adjust path if needed
+import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import './BestSellingBooks.css';
+import { useCart } from '../../Context/CartContext';
+import { WishlistContext } from '../../Context/WishlistContext'; // 👈 import wishlist context
 
 const books = [
   { id: 1, title: 'The Silent Patient', author: 'Alex Michaelides', price: 499, image: '/assets/book1.jpg' },
@@ -19,18 +21,28 @@ const books = [
 
 const BestSellingBooks = () => {
   const { addToCart } = useCart();
+  const { addToWishlist, wishlist } = useContext(WishlistContext); // 👈 use wishlist
+
+  const isInWishlist = (id) => wishlist.some(item => item.id === id); // check duplicate
 
   return (
     <section className="best-selling-section">
       <h2 className="section-title">🔥 Best Selling Books</h2>
       <div className="book-grid">
         {books.map((book) => (
-          <div key={book.id} className="book-card">
-            <img src={book.image} alt={book.title} />
-            <h3>{book.title}</h3>
-            <p className="author">by {book.author}</p>
-            <p className="price">₹{book.price}</p>
-            <button className="add-btn" onClick={() => addToCart(book)}>Add to Cart</button>
+         <div className="book-card">
+  <Link to={`/book/${book.id}`}   className="book-link">
+    <img src={book.image} alt={book.title} />
+    <h3>{book.title}</h3>
+    <p className="author">by {book.author}</p>
+    <p className="price">₹{book.price}</p>
+  </Link>
+            <div className="book-buttons">
+              <button className="add-btn" onClick={() => addToCart(book)}>🛒Cart</button>
+              <button className="wishlist-btn" onClick={() => addToWishlist(book)} disabled={isInWishlist(book.id)}>
+                {isInWishlist(book.id) ? "❤️ In Wishlist" : "🤍Wishlist"}
+              </button>
+            </div>
           </div>
         ))}
       </div>
