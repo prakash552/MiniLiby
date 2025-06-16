@@ -2,8 +2,11 @@ import '../user/Navbar.css'; // Importing CSS for Navbar
 import { NavLink, useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { useEffect, useState, useRef } from 'react';
+import { useWishlist } from '../../Context/WishlistContext';
 
-function Navbar() {
+const Navbar = () => {
+  const { wishlistItems } = useWishlist(); // ✅ useWishlist inside the component
+
   const [user, setUser] = useState(null);
   const [showDropdown, setShowDropdown] = useState(false);
   const navigate = useNavigate();
@@ -26,13 +29,12 @@ function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-const handleLogout = () => {
-  localStorage.removeItem('user');
-  localStorage.removeItem('token');
-  alert('You have been logged out!');
-  navigate('/auth');
-};
-
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    alert('You have been logged out!');
+    navigate('/auth');
+  };
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -48,7 +50,13 @@ const handleLogout = () => {
         <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>Home</NavLink></li>
         <li><NavLink to="/BooksPage" className={({ isActive }) => isActive ? 'active' : ''}>Books</NavLink></li>
         <li><NavLink to="/authors" className={({ isActive }) => isActive ? 'active' : ''}>Authors</NavLink></li>
-       <li><NavLink to="/wish" className={({ isActive }) => isActive ? 'active' : ''}>Wishlist</NavLink></li>
+        <li>
+          <NavLink to="/wish" className={({ isActive }) => isActive ? 'active' : ''}>
+            Wishlist {wishlistItems.length > 0 && (
+              <span className="wishlist-badge">{wishlistItems.length}</span>
+            )}
+          </NavLink>
+        </li>
         <li><NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>About Us</NavLink></li>
         <li><NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>Contact</NavLink></li>
       </ul>
@@ -62,7 +70,7 @@ const handleLogout = () => {
           <div className="user-dropdown" ref={dropdownRef}>
             <div className="user-icon" onClick={toggleDropdown}>
               <FaUserCircle size={28} style={{ marginRight: '6px' }} />
-              {user.name.split(' ')[0]} 
+              {user.name.split(' ')[0]}
             </div>
             {showDropdown && (
               <ul className="dropdown-menu">
@@ -79,6 +87,6 @@ const handleLogout = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;

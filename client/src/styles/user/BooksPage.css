@@ -228,3 +228,38 @@
 .reset-btn:hover {
   background-color: #c0392b;
 }
+
+.book-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.book-actions button {
+   flex: 1;
+  font-size: 1rem;
+  padding: 4px 8px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 1px solid #0b2554;
+  transition: background 0.3s ease;
+}
+
+.book-actions button:hover {
+  opacity: 0.9;
+}
+
+.wishlist-btn {
+  background-color: #e53935;
+  color: #fff;
+}
+
+.book-actions button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+.book-actions button:first-child:hover {
+  background-color: #0056b3;
+}

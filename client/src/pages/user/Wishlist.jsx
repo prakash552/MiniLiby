@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
-import '../../styles/user/Wishlist.css'; // Importing Wishlist CSS
-import { WishlistContext } from '../../Context/WishlistContext';
+// src/pages/user/Wishlist.jsx
+
+import React from 'react';
+import '../../styles/user/Wishlist.css';
+import { useWishlist } from '../../Context/WishlistContext';
 import { useCart } from '../../Context/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const Wishlist = () => {
-  const { wishlist, removeFromWishlist } = useContext(WishlistContext);
+  const { wishlistItems: wishlist, removeFromWishlist } = useWishlist();
   const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const moveToCart = (book) => {
     addToCart(book);
@@ -16,7 +20,15 @@ const Wishlist = () => {
     <div className="wishlist-container">
       <h2>❤️ Your Wishlist</h2>
       {wishlist.length === 0 ? (
-        <p className="empty-wishlist">Your wishlist is empty. Start exploring books!</p>
+        <div className="empty-wishlist-box">
+          <p className="empty-wishlist">🧺 Your wishlist is empty!</p>
+          <p className="wishlist-suggestion">
+            Browse bestsellers and add your favorites here.
+          </p>
+          <button className="shop-books-btn" onClick={() => navigate('/')}>
+            📚 Shop Books Now
+          </button>
+        </div>
       ) : (
         <div className="wishlist-grid">
           {wishlist.map((book) => (
