@@ -1,6 +1,6 @@
 .authors-page {
   padding: 40px 20px;
-  background-color: #fdfdfd;
+  background-color: #0b2554;
   min-height: 100vh;
   text-align: center;
 }
@@ -8,7 +8,7 @@
 .authors-page h1 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #2c3e50;
+  color: white;
 }
 
 .author-list {

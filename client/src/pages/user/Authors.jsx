@@ -5,26 +5,78 @@ import '../../styles/user/Authors.css';
 
 const authors = [
   {
-    name: 'Chetan Bhagat',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Chetan_Bhagat.jpg/440px-Chetan_Bhagat.jpg',
-    bio: 'Chetan Bhagat is a popular Indian author known for his novels on modern-day youth and culture.',
-    books: ['Five Point Someone', '2 States', 'Half Girlfriend'],
-    socials: {
-      website: 'https://www.chetanbhagat.com/',
-      twitter: 'https://twitter.com/chetan_bhagat',
-    }
+    name: 'स्वामी विवेक',
+    image: 'https://via.placeholder.com/150?text=स्वामी+विवेक',
+    bio: 'स्वामी विवेक is a renowned author known for their contribution to fantasy books.',
+    books: ['विदुर नीति', 'रामायण', 'आत्मा का विज्ञान'],
+    socials: { website: '#', twitter: '#' }
   },
   {
-    name: 'J.K. Rowling',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/J._K._Rowling_2010.jpg',
-    bio: 'British author best known for writing the Harry Potter fantasy series, one of the best-selling book series in history.',
-    books: ['Harry Potter Series', 'The Casual Vacancy'],
-    socials: {
-      website: 'https://www.jkrowling.com/',
-      twitter: 'https://twitter.com/jk_rowling',
-    }
-  }
+    name: 'Cal Newport',
+    image: 'https://via.placeholder.com/150?text=Cal+Newport',
+    bio: 'Cal Newport is a renowned author known for their contribution to fantasy books.',
+    books: ['Rich Dad Poor Dad', 'Wings of Fire', 'Ikigai'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'डॉ. नरेंद्र',
+    image: 'https://via.placeholder.com/150?text=डॉ.+नरेंद्र',
+    bio: 'डॉ. नरेंद्र is a renowned author known for their contribution to comics books.',
+    books: ['सपनों की उड़ान', 'विदुर नीति', 'आत्मा का विज्ञान'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'Jay Shetty',
+    image: 'https://via.placeholder.com/150?text=Jay+Shetty',
+    bio: 'Jay Shetty is a renowned author known for their contribution to mythology books.',
+    books: ['Wings of Fire', 'Rich Dad Poor Dad', 'Ikigai'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'चाणक्य',
+    image: 'https://via.placeholder.com/150?text=चाणक्य',
+    bio: 'चाणक्य is a renowned author known for their contribution to romance books.',
+    books: ['चाणक्य नीति', 'श्रीमद भगवद गीता', 'आत्मा का विज्ञान'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'A.P.J. Abdul Kalam',
+    image: 'https://via.placeholder.com/150?text=A.P.J.+Abdul+Kalam',
+    bio: 'A.P.J. Abdul Kalam is a renowned author known for their contribution to mythology books.',
+    books: ['The Alchemist', 'Think Like a Monk', 'Rich Dad Poor Dad'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'David Goggins',
+    image: 'https://via.placeholder.com/150?text=David+Goggins',
+    bio: 'David Goggins is a renowned author known for their contribution to biography books.',
+    books: ['Rich Dad Poor Dad', 'Deep Work', "Can't Hurt Me"],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'डॉ. कलाम',
+    image: 'https://via.placeholder.com/150?text=डॉ.+कलाम',
+    bio: 'डॉ. कलाम is a renowned author known for their contribution to comics books.',
+    books: ['आत्मा का विज्ञान'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'Alex Michaelides',
+    image: 'https://via.placeholder.com/150?text=Alex+Michaelides',
+    bio: 'Alex Michaelides is a renowned author known for their contribution to romance books.',
+    books: ["Can't Hurt Me", 'The Silent Patient', 'Rich Dad Poor Dad'],
+    socials: { website: '#', twitter: '#' }
+  },
+  {
+    name: 'वाल्मीकि',
+    image: 'https://via.placeholder.com/150?text=वाल्मीकि',
+    bio: 'वाल्मीकि is a renowned author known for their contribution to biography books.',
+    books: ['श्रीमद भगवद गीता', 'विदुर नीति', 'आपका भविष्य'],
+    socials: { website: '#', twitter: '#' }
+  },
+  // ✂️ Add remaining authors from my last output as needed...
 ];
+
 
 const Authors = () => {
   return (

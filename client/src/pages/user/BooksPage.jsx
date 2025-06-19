@@ -6,70 +6,11 @@ import '../../styles/user/BooksPage.css';
 import { useCart } from '../../Context/CartContext'; 
 import { useWishlist } from '../../Context/WishlistContext'; // ✅ Added
 import { Link } from 'react-router-dom';
+import books from '../../data/books';
 
-const booksData = [
-  {
-    id: 1,
-    title: 'The Psychology of Money',
-    author: 'Morgan Housel',
-    price: 399,
-    rating: 5,
-    category: 'Finance',
-    language: 'English',
-    image: '/assets/books/money.jpg',
-  },
-  {
-    id: 2,
-    title: 'Atomic Habits',
-    author: 'James Clear',
-    price: 499,
-    rating: 4,
-    category: 'Self-Help',
-    language: 'English',
-    image: '/assets/books/atomic.jpg',
-  },
-  {
-    id: 3,
-    title: 'Ikigai',
-    author: 'Francesc Miralles',
-    price: 299,
-    rating: 4,
-    category: 'Philosophy',
-    language: 'English',
-    image: '/assets/books/ikigai.jpg',
-  },
-  {
-    id: 4,
-    title: 'The Silent Patient',
-    author: 'Alex Michaelides',
-    price: 450,
-    rating: 4,
-    category: 'Thriller',
-    language: 'English',
-    image: '/assets/books/silent_patient.jpg',
-  },
-  {
-    id: 5,
-    title: 'Rich Dad Poor Dad',
-    author: 'Robert Kiyosaki',
-    price: 350,
-    rating: 5,
-    category: 'Finance',
-    language: 'English',
-    image: '/assets/books/richdad.jpg',
-  },
-  {
-    id: 7,
-    title: 'The Alchemist',
-    author: 'Paulo Coelho',
-    price: 299,
-    rating: 5,
-    language: 'English',
-    category: 'Adventure',
-    image: '/assets/books/alchemist.jpg',
-  },
-  // Add more books...
-];
+const booksData = books; // Assuming books is an array of book objects
+// If books is imported from a file, ensure it is an array of book objects
+// If books is an array of objects, you can directly use it as shown above
 
 const BooksPage = () => {
   const { addToCart } = useCart();
@@ -231,6 +172,8 @@ const BooksPage = () => {
                   <img src={book.image} alt={book.title} />
                   <h4>{book.title}</h4>
                   <p>By {book.author}</p>
+                  <p className="book-description">{book.description}</p>
+                
                  
                   <div className="book-meta">
                     <span className="rating">{'★'.repeat(book.rating)}</span>

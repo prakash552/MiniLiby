@@ -1,3 +1,4 @@
+/* Wishlist Container */
 .wishlist-container {
   padding: 30px;
   background: linear-gradient(to right, #f5f5fa, #ffffff);
@@ -12,99 +13,7 @@
   animation: fadeInDown 0.8s ease;
 }
 
-.empty-wishlist {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #999;
-}
-
-.wishlist-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.wishlist-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 15px;
-  transition: transform 0.3s ease;
-  animation: fadeInUp 1s ease;
-}
-
-.wishlist-card:hover {
-  transform: translateY(-8px);
-}
-
-.wishlist-card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.wishlist-info {
-  padding: 10px 5px;
-}
-
-.wishlist-info h3 {
-  font-size: 1.1rem;
-  color: #222;
-  margin: 5px 0;
-}
-
-.wishlist-info p {
-  margin: 2px 0;
-  color: #666;
-}
-
-.wishlist-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.move-btn,
-.remove-btn {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.move-btn {
-  background: #007bff;
-  color: white;
-}
-
-.remove-btn {
-  background: #dc3545;
-  color: white;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  } to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  } to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* src/styles/user/Wishlist.css */
-
+/* Empty Wishlist Styles */
 .empty-wishlist-box {
   text-align: center;
   padding: 60px 20px;
@@ -112,6 +21,12 @@
   border-radius: 12px;
   margin-top: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.empty-wishlist-box img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
 .empty-wishlist {
@@ -143,8 +58,140 @@
   transform: scale(1.05);
   background: linear-gradient(90deg, #0056d2, #00a9cc);
 }
-.empty-wishlist-box img {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 20px;
+
+/* Wishlist Grid */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* Card Styles */
+.wishlist-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-8px);
+}
+
+.wishlist-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Wishlist Info */
+.wishlist-info {
+  padding: 10px 5px;
+}
+
+.wishlist-info h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 5px 0;
+}
+
+.wishlist-info p {
+  margin: 2px 0;
+  color: #666;
+}
+
+/* Actions */
+.wishlist-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.move-btn,
+.remove-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.move-btn {
+  background: #007bff;
+  color: white;
+}
+
+.remove-btn {
+  background: #dc3545;
+  color: white;
+}
+
+/* Badge & Pricing */
+.wishlist-badge {
+  background-color: #ff4d4f;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.price-section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.discounted-price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.stock-status {
+  font-size: 14px;
+  color: green;
+  margin-top: 5px;
+}
+
+.rating-stars {
+  font-size: 14px;
+  color: #f5a623;
+  margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
